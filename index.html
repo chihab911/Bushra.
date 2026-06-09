@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Bushra ✨</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="custom-cursor"></div>
+
+    <canvas id="globalCanvas"></canvas>
+
+    <div id="intro-overlay">
+        <div class="curtain left-curtain"></div>
+        <div class="curtain right-curtain"></div>
+        <div class="intro-content">
+            <h1 class="intro-text">I have a surprise for you, Bushra...</h1>
+            <button id="start-btn" class="luxury-btn">Start Journey</button>
+        </div>
+    </div>
+
+    <main id="main-content" class="fade-in-hidden">
+
+        <div class="aurora-bg"></div>
+
+        <section id="hero" class="parallax-section">
+            <div class="glass-card hero-card">
+                <h1 class="neon-title">Bushra</h1>
+                <p class="subtitle">The world became brighter the day you were born.</p>
+                
+                <div class="countdown-container">
+                    <div class="countdown-circle">
+                        <svg>
+                            <circle cx="70" cy="70" r="60"></circle>
+                            <circle cx="70" cy="70" r="60" id="progress-circle"></circle>
+                        </svg>
+                        <div class="countdown-number" id="countdown-seconds">5</div>
+                    </div>
+                    <span class="countdown-label">Seconds to the magic...</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="cake-section" class="parallax-section">
+            <div class="glass-card cake-card">
+                <h2>Make a Wish</h2>
+                <p class="instruction">Click the candles to blow them out!</p>
+                
+                <div class="cake">
+                    <div class="layer layer-bottom"></div>
+                    <div class="layer layer-middle"></div>
+                    <div class="layer layer-top"></div>
+                    <div class="candles-container">
+                        <div class="candle" onclick="blowCandle(this)"><div class="flame"></div></div>
+                        <div class="candle" onclick="blowCandle(this)"><div class="flame"></div></div>
+                        <div class="candle" onclick="blowCandle(this)"><div class="flame"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gift-section" class="parallax-section">
+            <div class="gift-envelope-wrapper">
+                
+                <div class="glass-card gift-card">
+                    <h2>A Box Full of Stars</h2>
+                    <div class="gift-box-3d" id="giftBox" onclick="openGift()">
+                        <div class="box-lid"></div>
+                        <div class="box-body"></div>
+                    </div>
+                    <p class="tap-hint">Tap to unlock</p>
+                </div>
+
+                <div class="glass-card envelope-card">
+                    <h2>A Letter For You</h2>
+                    <div class="envelope-wrapper" id="envelope" onclick="openEnvelope()">
+                        <div class="envelope">
+                            <div class="flap"></div>
+                            <div class="pocket"></div>
+                            <div class="letter" id="letter">
+                                <div class="letter-text" id="typewriter-text"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="book-section" class="parallax-section">
+            <div class="glass-card book-container">
+                <h2>Bushra's Chapters</h2>
+                <div class="book" id="book">
+                    <div class="page cover-page" onclick="flipPage(this, 1)">
+                        <div class="page-front">
+                            <h3>The Book of Bushra</h3>
+                            <p>✨ Open Me ✨</p>
+                        </div>
+                        <div class="page-back">
+                            <h3>Chapter 1: Elegance</h3>
+                            <p>May your days be filled with the same grace and beauty you bring into the lives of everyone around you.</p>
+                        </div>
+                    </div>
+                    <div class="page" onclick="flipPage(this, 2)">
+                        <div class="page-front">
+                            <h3>Chapter 2: Joy</h3>
+                            <p>Laugh, smile, and dance today. You deserve all the stars aligned perfectly just for your happiness.</p>
+                        </div>
+                        <div class="page-back">
+                            <h3>Chapter 3: Dreams</h3>
+                            <p>Never stop reaching for the clouds. Your potential is limitless, and this year will be your best yet.</p>
+                        </div>
+                    </div>
+                    <div class="page back-cover">
+                        <div class="page-front">
+                            <h3>The Journey Continues...</h3>
+                            <p>Scroll down for the grand finale! ❤️</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="final-celebration">
+            <h1 class="grand-title" id="grandTitle">Happy Birthday Bushra ❤️</h1>
+        </section>
+
+        <button id="backToTop" class="luxury-btn hidden-btn" onclick="scrollToTop()">↑</button>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
